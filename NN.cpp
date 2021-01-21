@@ -78,13 +78,16 @@ void NN::open_files(){
 void NN::Training_parameters(){
     mat X_batches; /*single data*/
     mat Y_batches; /*single label*/
+    AdaDelta opt(1.0, 1, 0.99, 1e-8, 1000, 1e-9, true);
+    
     for (int epoch = 0; epoch < N_Epoch; ++epoch)
     {
         cout<<"Epoch Training: "<<epoch<<endl;
-        for (int b=0; b<trainLabels.n_rows; ++b) {
+        for (int b=0; b<trainLabels.n_rows; b=b+20) {
             X_batches = trainData.submat(b*4, 0, (b*4)+3, trainLabels.n_cols-1);
             Y_batches = trainLabels.submat(b, 0, b, trainLabels.n_cols-1);
-            model.Train(X_batches, Y_batches);
+            model.Train(X_batches, Y_batches, opt, PrintLoss());
+	    opt.ResetPolicy() = false;
         }
     }
     cout<<"I finished the trainging, I test my learning values"<<endl;

@@ -15,10 +15,11 @@
 #include <mlpack/methods/ann/loss_functions/sigmoid_cross_entropy_error.hpp>
 #include <mlpack/methods/ann/layer/flexible_relu.hpp>
 #include <mlpack/methods/ann/ffn.hpp>
+#include <ensmallen.hpp>
 using namespace mlpack;
 using namespace mlpack::ann;
 using namespace arma;
-
+using namespace ens;
 /***********************************************************************************/
 /***********************************************************************************/
 /***********************************************************************************/

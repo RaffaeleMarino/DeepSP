@@ -55,8 +55,8 @@
 #define ZERO (1.0E-10)/*all values less than 1.0e-10 are zero*/
 //#define PRINT_FORMULA_CNF
 #define NeurNET
-//#define NeurNETraining
-#define NeurNETLoad
+#define NeurNETraining
+//#define NeurNETLoad
 
 
 #define INITLEN 32
