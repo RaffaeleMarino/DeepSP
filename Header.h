@@ -55,20 +55,20 @@
 #define ZERO (1.0E-10)/*all values less than 1.0e-10 are zero*/
 //#define PRINT_FORMULA_CNF
 #define NeurNET
-#define NeurNETraining
-//#define NeurNETLoad
+//#define NeurNETraining
+#define NeurNETLoad
 
 
 #define INITLEN 32
 /*if SAT is un-commented will be a sat-solver*/
 #define SAT
 #define MAXSAT
-//#define TRAIN_ANAL
+
 
 
 using namespace std;
 
-const string directory="/Users/rmarino/Documents/News-Comb-optimisation/nuova_idea/";/*directory for output files*/
+const string directory=".";/*directory for output files*/
 enum{t_max=1024}; /*maximum number of iteration for a message passing algorithm*/
 const double rho_SP=1.;/*from SP to BP when it is set to 0*/
 const double e=2.7182818284590452353602874713527;/*constant e*/
