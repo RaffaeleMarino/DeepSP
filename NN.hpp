@@ -15,12 +15,9 @@
 #include <mlpack/methods/ann/loss_functions/sigmoid_cross_entropy_error.hpp>
 #include <mlpack/methods/ann/layer/flexible_relu.hpp>
 #include <mlpack/methods/ann/ffn.hpp>
-#include <ensmallen.hpp>
 using namespace mlpack;
 using namespace mlpack::ann;
 using namespace arma;
-using namespace ens;
-
 
 /***********************************************************************************/
 /***********************************************************************************/
@@ -90,7 +87,7 @@ inline bool NN::Predict(double pp, double pm, unsigned n_n, unsigned n_nn){
 
 /*public inline member for load parameters of the neural network*/
 inline void NN::load(){
-    data::Load("model.xml", "model", model);
+    data::Load("/scratch/rmarino/slurm/model.xml", "model", model);
 }
 
 /***********************************************************************************/
