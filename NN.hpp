@@ -47,7 +47,7 @@ public:
         model.Add<Linear<> >(40,40);
         model.Add<SigmoidLayer<> >();
         model.Add<Linear<> >(40,1);
-        model.Add<SigmoidLayer<> >();
+        //model.Add<SigmoidLayer<> >();
         /*end of the neural network*/
         X_input.zeros(4,1);
     }
